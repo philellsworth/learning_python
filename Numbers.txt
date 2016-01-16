@@ -1,0 +1,9 @@
+3
+3.12
+1/2
+cat
+dog
+pi
+e
+ninety-nine
+8+3j
