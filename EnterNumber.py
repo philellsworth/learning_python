@@ -15,6 +15,11 @@ def GiveMeValueInfo ( pTst ) :
         exc_type, exc_value, exc_traceback = sys.exc_info()
         print ('\t there was a problem inside GiveMeValueInfo on line:', exc_traceback.tb_lineno)
         traceback.print_tb(exc_traceback, limit=1, file=sys.stdout)
+##    try :
+##        
+##    except :
+##        exc_type, exc_value, exc_traceback = sys.exc_info() # why this?
+##        print ('\t there was a problem running GiveMeValueInfo on line:', exc_traceback.tb_lineno)            
 
 if __name__ == '__main__' :
     try :
@@ -22,6 +27,19 @@ if __name__ == '__main__' :
         for elt in lst :
             print ('Running TellMeTheType for value' , elt )
             TellMeTheType ( elt )
+    except :
+        exc_type, exc_value, exc_traceback = sys.exc_info()
+        print ('\t there was a problem running GiveMeValueInfo on line:', exc_traceback.tb_lineno)
+ if __name__ == '__main__' :
+    try :
+        lst = (3,4, 5, 6 ,7 ,10, 'cat')
+        for elt in lst :
+            if pTst % 2 == 0 :
+            print ("That's an even number.")
+        elif pTst == 3 :
+            print ("There's your 3.")
+        else :
+            print ("Must be some other odd number besides 3.")
     except :
         exc_type, exc_value, exc_traceback = sys.exc_info()
         print ('\t there was a problem running GiveMeValueInfo on line:', exc_traceback.tb_lineno)
